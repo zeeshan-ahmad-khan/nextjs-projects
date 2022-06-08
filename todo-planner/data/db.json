@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "title": "code always",
+      "details": "24 hrs",
+      "completed": true,
+      "id": 2
+    },
+    {
+      "title": "eat",
+      "details": "healthy",
+      "completed": false,
+      "id": 3
+    }
+  ]
+}
