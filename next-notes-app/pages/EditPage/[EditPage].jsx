@@ -48,7 +48,7 @@ function EditPage() {
 
     return (
         <div className="edit-todo">
-            <h3>Edit your task !!!</h3>
+            <h3>Edit your notes !!!</h3>
             {error && <p style={{ color: "red" }}>An error occurred ! Please try again.</p>}
             <form onSubmit={handleSubmit}>
 

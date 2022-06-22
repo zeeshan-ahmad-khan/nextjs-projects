@@ -31,7 +31,7 @@ function AddTodo() {
 
     return (
         <div className="add-todo">
-            <h3>Add your task !!!</h3>
+            <h3>Add your notes !!!</h3>
             {error && <p style={{ color: "red" }}>An error occurred ! Please try again.</p>}
             <form onSubmit={handleSubmit}>
 

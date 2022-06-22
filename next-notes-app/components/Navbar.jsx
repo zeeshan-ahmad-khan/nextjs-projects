@@ -4,7 +4,7 @@ function Navbar() {
     return (
         <div className="navbar">
             <Link href='/'>Home</Link>
-            <Link href='/AddPage'>Add Task</Link>
+            <Link href='/AddPage'>Add Notes</Link>
         </div>
     )
 }
