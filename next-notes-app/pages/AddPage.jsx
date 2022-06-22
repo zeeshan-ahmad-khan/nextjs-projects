@@ -4,6 +4,7 @@ function AddTodo() {
 
     const [title, setTitle] = useState("");
     const [details, setDetails] = useState("");
+    const [error, setError] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -15,15 +16,23 @@ function AddTodo() {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(todo)
-        }).catch(error => console.log(error))
-
+        }).catch(error => {
+            console.log(error)
+            setError(true)
+        })
         setTitle("")
         setDetails("")
+
+        setTimeout(() => {
+            setError(false)
+        }, 3000);
+
     }
 
     return (
         <div className="add-todo">
             <h3>Add your task !!!</h3>
+            {error && <p style={{ color: "red" }}>An error occurred ! Please try again.</p>}
             <form onSubmit={handleSubmit}>
 
                 <label htmlFor="title">Title: </label>

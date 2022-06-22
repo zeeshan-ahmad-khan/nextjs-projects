@@ -5,6 +5,7 @@ function EditPage() {
 
     const [title, setTitle] = useState("");
     const [details, setDetails] = useState("");
+    const [error, setError] = useState(false)
     const router = useRouter();
     const { EditPage } = router.query;
 
@@ -34,13 +35,21 @@ function EditPage() {
                 setDetails("")
                 router.push('/');
             })
-            .catch(error => console.log(error))
+            .catch(error => {
+                setError(true);
+                console.log(error)
+            })
+
+        setTimeout(() => {
+            setError(false)
+        }, 3000);
 
     }
 
     return (
         <div className="edit-todo">
             <h3>Edit your task !!!</h3>
+            {error && <p style={{ color: "red" }}>An error occurred ! Please try again.</p>}
             <form onSubmit={handleSubmit}>
 
                 <label htmlFor="title">Title: </label>
