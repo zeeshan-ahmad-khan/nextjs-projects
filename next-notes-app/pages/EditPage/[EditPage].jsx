@@ -28,11 +28,14 @@ function EditPage() {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(todo)
-        }).catch(error => console.log(error))
+        })
+            .then(() => {
+                setTitle("")
+                setDetails("")
+                router.push('/');
+            })
+            .catch(error => console.log(error))
 
-        setTitle("")
-        setDetails("")
-        router.push('/');
     }
 
     return (
