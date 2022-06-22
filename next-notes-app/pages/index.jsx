@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import Head from 'next/head'
 import SingleTodo from "../components/SingleTodo";
 
 export default function Home() {
@@ -62,6 +63,9 @@ export default function Home() {
 
   return (
     <div className="home">
+      <Head>
+        <title>Next Notes App</title>
+      </Head>
       <h1>Your Notes</h1>
       <p style={{ width: "100%" }}>Click on the title to reveal its content !!!</p>
       {todos.map(todo => {

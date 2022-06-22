@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 function EditPage() {
 
@@ -48,6 +49,9 @@ function EditPage() {
 
     return (
         <div className="edit-todo">
+            <Head>
+                <title>Edit Notes</title>
+            </Head>
             <h3>Edit your notes !!!</h3>
             {error && <p style={{ color: "red" }}>An error occurred ! Please try again.</p>}
             <form onSubmit={handleSubmit}>

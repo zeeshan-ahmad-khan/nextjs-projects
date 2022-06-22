@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useState } from "react"
 
 function AddTodo() {
@@ -31,6 +32,9 @@ function AddTodo() {
 
     return (
         <div className="add-todo">
+            <Head>
+                <title>Add New Notes</title>
+            </Head>
             <h3>Add your notes !!!</h3>
             {error && <p style={{ color: "red" }}>An error occurred ! Please try again.</p>}
             <form onSubmit={handleSubmit}>

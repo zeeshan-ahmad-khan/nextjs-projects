@@ -28,7 +28,7 @@ textarea {
 .add-todo,
 .edit-todo,
 .navbar {
-  width: 550px;
+  width: 50%;
   margin-inline: auto;
 }
 
