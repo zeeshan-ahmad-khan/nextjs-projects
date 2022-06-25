@@ -20,7 +20,7 @@ function SingleTodo({ todo, handleDelete, handleComplete }) {
                 <button onClick={() => {
                     setToggelCompleted(!toggleCompleted)
                     handleComplete(todo)
-                }} className={toggleCompleted ? "active" : ""}>Completed</button>
+                }} className={todo.completed ? "active" : ""}>Completed</button>
             </div>
         </div>
     )
